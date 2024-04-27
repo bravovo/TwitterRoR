@@ -1,28 +1,5 @@
-<div class = "container home-sections d-flex flex-row justify-content-center align-items-center">
-    <div class = "login-section">
-        <div>
-            <h1 class="h1-text">Twitter</h1>
-        </div>
-        <div class="card-body text-center">
-            <div class="mb-3 mt-4">
-                <input type="email" class="form-control" id="email" placeholder="Номер телефону, ім'я користувача або email">
-            </div>
-            <div class="mb-3">
-                <input type="password" class="form-control" id="email" placeholder="Пароль">
-            </div>
-            <a href="#" class="btn btn-primary d-block"> Увійти </a>
-            <% if notice %>
-                <p class="notice"><%= notice %></p>
-            <% elsif alert %>
-                <p class="alert"><%= alert %></p>
-            <% end %>
-        </div>
+<h1>Home page</h1>
 
-        <div class="card text-center">
-            <div class="card-text">
-                Не маєте акаунта?
-                <a href="#" class="fs-6 d-block my-4 text-decoration-none"> Зареєструватись </a>
-            </div>
-        </div>
-    </div>
-</div>
+<% if current_user %>
+    <%= button_to "Вийти з акаунта", destroy_user_session_path, method: :delete %>
+<% end %>
