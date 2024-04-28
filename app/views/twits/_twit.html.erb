@@ -1,6 +1,6 @@
 <div id="<%= dom_id twit %>">
   <div class="card" style="width: 25rem;">
-    <div class="card-header bg-white">
+    <div class="card-header bg-white" style="border-color: transparent;">
       <div class="d-flex justify-content-between">
         <div style="width:60%">
           <% if twit.user.profile_pic.attached? %>
@@ -10,7 +10,7 @@
           <% end %>
           <span class="fw-bold mx-2"><%= twit.user.username %></span>
         </div>
-        <a class="edit_twit_link" href="#">Редагувати твіт</a>
+        <a class="edit_twit_link text-muted" style="text-decoration: none;" href="#">Редагувати твіт</a>
       </div>
     </div>
     <div class="card-body">
@@ -21,9 +21,14 @@
         <% end %>
       </div>
     </div>
-    <div class="card-footer">
-      <a class="edit_twit_link" href="#">Видалити твіт</a>
+    <div class="card-footer bg-white d-flex flex-column gap-0">
+      <div class="comment-twit d-flex justify-content-between">
+        <input type="text" class="w-75" style="border: none;" placeholder="Додайте коментар...">
+        <a class="text-primary fw-bold" href="#" style="text-decoration: none;">Коментувати</a>
+      </div>
+      <hr>
+      <small class="text-muted my-2"> <%= time_ago_in_words(twit.created_at) %> </small>
+      <a class="edit_twit_link text-muted" style="text-decoration: none;" href="#">Видалити твіт</a>
     </div>
   </div>
-
 </div>

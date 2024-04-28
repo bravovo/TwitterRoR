@@ -18,6 +18,7 @@ gem "bootstrap-sass"
 gem "bootstrap-will_paginate"
 gem "sass-rails"
 gem "devise"
+gem "font-awesome-sass", "~> 6.1.2"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
