@@ -1,4 +1,11 @@
-<h1>Home page</h1>
+<div class="d-flex my-4 justify-content-center gap-3">
+    <div class="flex flex-column"> 
+        <% current_user.twits.each do |tw| %>
+            <%= render 'twits/twit', twit: tw %>
+        <% end %>
+    </div>
+    <%= render 'suggestions/suggestions_list' %>
+</div>
 
 <% if current_user %>
     <%= button_to "Вийти з акаунта", destroy_user_session_path, method: :delete %>
