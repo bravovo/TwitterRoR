@@ -10,33 +10,25 @@
       </ul>
     </div>
   <% end %>
+  <div class="container home-sections d-flex flex-row justify-content-center align-items-center" style="width: 400px;">
+    <div class="card-body">
+      <div class="mb-3 mt-4">
+        <%= form.text_field :caption, class: "form-control", placeholder: "Опис твіта"%>
+      </div>
 
-  <div>
-    <%= form.label :caption, style: "display: block" %>
-    <%= form.text_field :caption %>
-  </div>
+      <div class="mb-3">
+        <%= form.label :show_likes_count, style: "display: block" %>
+        <%= form.check_box :show_likes_count %>
+      </div>
 
-  <div>
-    <%= form.label :longitude, style: "display: block" %>
-    <%= form.text_field :longitude %>
-  </div>
+      <div class="mb-3">
+        <%= form.label :images, style:"display: block;" %>
+        <%= form.file_field :images, multiple: false %>
+      </div>
 
-  <div>
-    <%= form.label :latitude, style: "display: block" %>
-    <%= form.text_field :latitude %>
-  </div>
-
-  <div>
-    <%= form.label :show_likes_count, style: "display: block" %>
-    <%= form.check_box :show_likes_count %>
-  </div>
-
-  <div>
-    <%= form.label :images, style: "display: block" %>
-    <%= form.file_field :images, multiple: false %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+      <div>
+        <%= form.submit %>
+      </div>
+    </div>
   </div>
 <% end %>

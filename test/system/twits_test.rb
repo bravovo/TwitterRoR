@@ -12,40 +12,40 @@ class TwitsTest < ApplicationSystemTestCase
 
   test "should create twit" do
     visit twits_url
-    click_on "New twit"
+    click_on "Новий твіт"
 
-    check "Allow comments" if @twit.allow_comments
-    fill_in "Caption", with: @twit.caption
+    check "Дозволити коментарі" if @twit.allow_comments
+    fill_in "Опис твіта", with: @twit.caption
     fill_in "Latitude", with: @twit.latitude
     fill_in "Longitude", with: @twit.longitude
-    check "Show likes count" if @twit.show_likes_count
-    fill_in "User", with: @twit.user_id
-    click_on "Create Twit"
+    check "Показувати кількість лайків" if @twit.show_likes_count
+    fill_in "Користувач", with: @twit.user_id
+    click_on "Створити твіт"
 
-    assert_text "Twit was successfully created"
-    click_on "Back"
+    assert_text "Твіт успішно створений"
+    click_on "Назад"
   end
 
   test "should update Twit" do
     visit twit_url(@twit)
-    click_on "Edit this twit", match: :first
+    click_on "Редагувати твіт", match: :first
 
-    check "Allow comments" if @twit.allow_comments
-    fill_in "Caption", with: @twit.caption
+    check "Дозволити коментарі" if @twit.allow_comments
+    fill_in "Опис твіта", with: @twit.caption
     fill_in "Latitude", with: @twit.latitude
     fill_in "Longitude", with: @twit.longitude
-    check "Show likes count" if @twit.show_likes_count
-    fill_in "User", with: @twit.user_id
-    click_on "Update Twit"
+    check "Показати кількість лайків" if @twit.show_likes_count
+    fill_in "Користувач", with: @twit.user_id
+    click_on "Відредагувати твіт"
 
-    assert_text "Twit was successfully updated"
-    click_on "Back"
+    assert_text "Твіт успішно оновлено"
+    click_on "Назад"
   end
 
   test "should destroy Twit" do
     visit twit_url(@twit)
-    click_on "Destroy this twit", match: :first
+    click_on "Видалити твіт", match: :first
 
-    assert_text "Twit was successfully destroyed"
+    assert_text "Твіт успішно видалено"
   end
 end

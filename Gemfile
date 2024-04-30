@@ -14,7 +14,6 @@ gem "bootsnap", require: false
 gem "will_paginate"
 gem 'mini_racer'
 gem "bootstrap",  "~> 5.2.2"
-gem "bootstrap-sass"
 gem "bootstrap-will_paginate"
 gem "sass-rails"
 gem "devise"

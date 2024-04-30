@@ -1,14 +1,12 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Twits</h1>
-
-<div id="twits d-flex justify-content-center">
-  <% @twits.each do |twit| %>
-    <%= render twit %>
-    <p>
-      <%= link_to "Show this twit", twit %>
-    </p>
-  <% end %>
+<div class="d-flex my-4 justify-content-center gap-3">
+    <div class="flex flex-column"> 
+        <% current_user.twits.reverse.each do |tw| %>
+            <%= render 'twits/twit', twit: tw %>
+        <% end %>
+    </div>
+    <%= render 'suggestions/suggestions_list' %>
 </div>
 
-<%= link_to "New twit", new_twit_path %>
+<% if current_user %>
+    <%= button_to "Вийти з акаунта", destroy_user_session_path, method: :delete %>
+<% end %>

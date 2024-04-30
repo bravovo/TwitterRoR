@@ -1,12 +1,16 @@
-.container{
-    width: 500px;
+.login-section{
+    width: 400px;
 }
 .h1-text{
+    margin-top: 20px;
     text-align: center;
 }
 .btn{
-    width: 150px;
+    width: 100%;
 }
-.card-body, .mb-3{
+.card-body{
     margin-bottom: 30px;
+}
+.card-text{
+    margin-top: 15px;
 }
