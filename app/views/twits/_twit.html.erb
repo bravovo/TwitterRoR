@@ -13,13 +13,14 @@
         <%= link_to "Редагувати твіт", edit_twit_path(twit), style: "text-decoration: none;"%>
       </div>
     </div>
-    <div class="card-body">
+    <div class="card-body d-block">
       <p class="card-text"><%= twit.caption %></p>
       <div>
         <% if twit.images.attached? %>
-          <%= image_tag twit.images, class: "d-block w-100" %>
+          <%= image_tag twit.images, class: "d-block w-100 mb-4" %>
         <% end %>
       </div>
+      <%= render "twits/twit_actions", twit: twit %>
     </div>
     <div class="card-footer bg-white d-flex flex-column gap-0">
       <div class="comment-twit d-flex justify-content-between">

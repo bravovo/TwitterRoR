@@ -262,6 +262,7 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
+    webpack (0.4.2)
     webrick (1.8.1)
     websocket (1.2.10)
     websocket-driver (0.7.6)
@@ -296,6 +297,7 @@ DEPENDENCIES
   turbo-rails
   tzinfo-data
   web-console
+  webpack (~> 0.4.2)
   will_paginate
 
 RUBY VERSION
