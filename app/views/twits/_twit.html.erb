@@ -22,11 +22,6 @@
       </div>
     </div>
     <div class="card-footer bg-white d-flex flex-column gap-0">
-      <div class="comment-twit d-flex justify-content-between">
-        <input type="text" class="w-75" style="border: none;" placeholder="Додайте коментар...">
-        <a class="text-primary fw-bold" href="#" style="text-decoration: none;">Коментувати</a>
-      </div>
-      <hr>
       <small class="text-muted my-2" style="margin-left: 7.5px"> <%= time_ago_in_words(twit.created_at) %> </small>
       <%= button_to "Видалити твіт", twit, method: :delete, class:"edit_twit_link text-muted bg-white", style:"text-color: red; border: none;" %>
     </div>
