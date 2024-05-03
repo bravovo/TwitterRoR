@@ -31,5 +31,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
-gem "webpack", "~> 0.4.2"

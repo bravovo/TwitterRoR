@@ -1,8 +1,0 @@
-<%= turbo_frame_tag "twit#{twit.id}actions" do %>
-    <div class="d-flex justify-content-start align-items-center gap-1 mb-2">
-        <%= button_to toggle_like_path(twit_id: twit.id), method: :post, style: "border:none; background:none" do %>
-            <i class="<%= twit.likes.find_by(user: current_user) ? "fa-solid color-red" : "fa-regular" %> fa-heart fa-xl"></i>
-        <% end %>
-    </div>
-    <small class="fw-bold mx-1"><%= pluralize(twit.likes.count, "like") %></small>
-<% end %>
