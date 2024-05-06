@@ -3,7 +3,7 @@ class TwitsController < ApplicationController
 
   # GET /twits or /twits.json
   def index
-    @twits = Twit.all
+    redirect_to root_path
   end
 
   # GET /twits/1 or /twits/1.json
@@ -49,6 +49,7 @@ class TwitsController < ApplicationController
 
   # DELETE /twits/1 or /twits/1.json
   def destroy
+    return if current_user != @twit.user
     @twit.destroy!
 
     respond_to do |format|

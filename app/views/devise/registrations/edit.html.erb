@@ -54,9 +54,11 @@
     </div>
   <% end %>
 
+  <%= button_to "Вийти з акаунта", destroy_user_session_path, method: :delete, class:"btn border border-1 d-block mb-3", style:"width: 250px;" %>
+
   <h3 class="h1-text">Видалити акаунт</h3>
 
-  <div><%= button_to "Видалити мій акаунт", registration_path(resource_name), data: { confirm: "Ви впевнені?", turbo_confirm: "Ви впевнені?" }, method: :delete, class: "btn btn-primary d-block mb-3" %></div>
+  <div><%= button_to "Видалити мій акаунт", registration_path(resource_name), data: { confirm: "Ви впевнені?", turbo_confirm: "Ви впевнені?" }, method: :delete, class: "btn btn-primary d-block mb-3", style:"background-color: red; border: none;" %></div>
 
-  <%= link_to "Назад", :back, style:"text-decoration:none;" %>
+  <%= link_to "Назад", :back, class:"mb-3", style:"text-decoration:none;" %>
 </div>

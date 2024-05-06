@@ -1,8 +1,8 @@
 <div class="container d-flex justify-content-center align-items-center gap-5" style="min-height: 20rem;">
     <% if user.profile_pic.attached? %>
-        <%= image_tag user.profile_pic, class: "img-thumbnail rounded-circle w-25", style: "max-width: 8rem; max-height: 8rem;" %>
+        <%= image_tag user.profile_pic, class: "img-thumbnail rounded-circle w-25", style: "max-width: 11rem; max-height: 11rem;" %>
     <% else %>
-        <%= image_tag 'default_avatar.png', class: "img-thumbnail rounded-circle w-25", style: "max-width: 8rem; max-height: 8rem;" %>
+        <%= image_tag 'default_avatar.png', class: "img-thumbnail rounded-circle w-25", style: "max-width: 11rem; max-height: 11rem;" %>
     <% end %>
 
     <div class="w-35 d-flex flex-column gap-4">
@@ -10,6 +10,10 @@
             <p class="m-0 fw-bold"><%= user.username %></p>
             <% unless user == current_user %>
                 <button class="btn btn-primary" style="width:50%">Підписатись</button>
+            <% else %>
+                <%= link_to edit_user_registration_path do %>
+                    <button class="btn border border-1" style="width:100%">Редагувати профіль</button>
+                <% end %>
             <% end %>
         </div>
 

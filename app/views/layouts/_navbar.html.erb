@@ -12,12 +12,12 @@
                 <i class="fa-solid fa-square-plus fa-xl"></i>
             <% end %>
             <% if current_user && current_user.profile_pic.attached? %>
-                <%= link_to profile_path do %>
-                    <%= image_tag current_user.profile_pic, class: "img-thumbnail rounded-circle", style: "width: 2rem" %>
+                <%= link_to user_path(current_user) do %>
+                    <%= image_tag current_user.profile_pic, class: "img-thumbnail rounded-circle", style: "width: 3rem; border-width: 2px;" %>
                 <% end %>
             <% else %>
-                <%= link_to profile_path do %>
-                    <%= image_tag 'default_avatar.png', class: "img-thumbnail rounded-circle", style: "width: 2rem" %>
+                <%= link_to user_path(current_user) do %>
+                    <%= image_tag 'default_avatar.png', class: "img-thumbnail rounded-circle", style: "width: 3rem; border-width: 2px;" %>
                 <% end %>
             <% end %>
         </div>

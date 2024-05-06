@@ -13,9 +13,9 @@
                         <div class="d-flex justify-content-between">
                             <div style="width:60%">
                             <% if twit.user.profile_pic.attached? %>
-                                <%= image_tag twit.user.profile_pic, class: "img-thumbnail rounded-circle", style: "width: 10%" %>
+                                <%= image_tag twit.user.profile_pic, class: "img-thumbnail rounded-circle", style: "width: 20%" %>
                             <% else %>
-                                <%= image_tag 'default_avatar.png', class: "img-thumbnail rounded-circle", style: "width: 10%" %>
+                                <%= image_tag 'default_avatar.png', class: "img-thumbnail rounded-circle", style: "width: 20%" %>
                             <% end %>
                             <span class="fw-bold mx-2"><%= twit.user.username %></span>
                             </div>
@@ -45,9 +45,9 @@
                         <div class="d-flex justify-content-between">
                             <div style="width:60%">
                             <% if twit.user.profile_pic.attached? %>
-                                <%= image_tag twit.user.profile_pic, class: "img-thumbnail rounded-circle", style: "width: 10%" %>
+                                <%= image_tag twit.user.profile_pic, class: "img-thumbnail rounded-circle", style: "width: 20%" %>
                             <% else %>
-                                <%= image_tag 'default_avatar.png', class: "img-thumbnail rounded-circle", style: "width: 10%" %>
+                                <%= image_tag 'default_avatar.png', class: "img-thumbnail rounded-circle", style: "width: 20%" %>
                             <% end %>
                             <span class="fw-bold mx-2"><%= twit.user.username %></span>
                             </div>
