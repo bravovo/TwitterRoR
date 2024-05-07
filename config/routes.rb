@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   root "home#index"
   get 'profile', to: 'pages#profile'
   resources :users, only: [:show]
+
+  post "follow", to: "follows#follow", as: :follow
+  delete "unfollow", to: "follows#unfollow", as: :unfollow
 end

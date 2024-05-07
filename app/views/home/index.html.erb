@@ -1,6 +1,6 @@
 <div class="d-flex my-4 justify-content-center gap-3">
     <div class="flex flex-column"> 
-        <% current_user.twits.reverse.each do |tw| %>
+        <% @feeds.each do |tw| %>
             <%= render 'twits/twit', twit: tw %>
         <% end %>
     </div>

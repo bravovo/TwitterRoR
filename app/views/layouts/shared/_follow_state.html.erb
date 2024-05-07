@@ -1,0 +1,9 @@
+<% if current_user.followings.include?(user) %>
+    <%= button_to "Відписатись", unfollow_path(user_id: user.id), method: :delete, class:"btn btn-danger" %>
+<% elsif current_user == user %>
+    <%= link_to edit_user_registration_path do %>
+        <button class="btn border border-1" style="width:100%">Редагувати профіль</button>
+    <% end %>
+<% else %>
+    <%= button_to "Підписатись", follow_path(user_id: user.id), method: :post, class:"btn btn-primary" %>
+<% end %>

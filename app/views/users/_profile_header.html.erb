@@ -8,19 +8,13 @@
     <div class="w-35 d-flex flex-column gap-4">
         <div class="d-flex gap-3 align-items-center">
             <p class="m-0 fw-bold"><%= user.username %></p>
-            <% unless user == current_user %>
-                <button class="btn btn-primary" style="width:50%">Підписатись</button>
-            <% else %>
-                <%= link_to edit_user_registration_path do %>
-                    <button class="btn border border-1" style="width:100%">Редагувати профіль</button>
-                <% end %>
-            <% end %>
+            <%= render "layouts/shared/follow_state", user: user %>
         </div>
 
         <div class="d-flex gap-5">
             <small class="fw-bold"><%= pluralize(user.twits.count, "twit")%></small>
-            <small class="fw-bold"><%= pluralize(100, "followers")%></small>
-            <small class="fw-bold"><%= pluralize(100, "following")%></small>
+            <small class="fw-bold"><%= pluralize(user.followers.count, "followers")%></small>
+            <small class="fw-bold"><%= pluralize(user.followings.count, "following")%></small>
         </div>
 
         <div class="d-flex flex-column">
